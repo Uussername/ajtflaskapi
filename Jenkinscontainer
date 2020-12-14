@@ -1,7 +1,11 @@
 //pipeline
 pipeline {
   agent { 
-    docker { image 'python:latest' args '--user 0:0'}}
+    docker { 
+      image 'python:latest' 
+      args '--user 0:0'
+    }
+  }
   stages {
     stage('build') {
       steps {
